@@ -33,7 +33,8 @@ const getPower = (reach, ...coordinates) => {
 }
 
 // return the station that has the most power
-const getStation = (x, y) => {
+(getStation = () => {
+  console.log('Hello');
   return linkStations
       // remove stations that are out of reach.
       .filter(station => {
@@ -46,9 +47,10 @@ const getStation = (x, y) => {
          }
         return next;
       }, 0);
-}
+})()
 
 //1. starting point, for each cordinate get the station and print output.
+/*
 input.map(coordinates => {
   const result = getStation(coordinates[0], coordinates[1]);
   if(result!==0) {
@@ -57,4 +59,6 @@ input.map(coordinates => {
     return console.log(`No link station within reach for point ${coordinates[0]},${coordinates[1]}`);
   }
 
+
 });
+*/
